@@ -1,0 +1,168 @@
+# CV AI Matcher
+
+CV AI Matcher, PDF formatındaki CV dosyalarını yapay zeka ile analiz eden bir web uygulamasıdır. Kullanıcı CV dosyasını yükler, sistem CV içeriğini okur ve kullanıcıya profesyonel bir kariyer analizi sunar.
+
+## Özellikler
+
+- PDF formatında CV yükleme
+- Yapay zeka destekli CV analizi
+- CV skoru hesaplama
+- Güçlü yönler analizi
+- Eksik beceriler analizi
+- Geliştirme önerileri
+- Kariyer potansiyeli değerlendirmesi
+- CV'ye uygun iş pozisyonu önerileri
+- Modern ve kullanıcı dostu arayüz
+
+## Kullanılan Teknolojiler
+
+### Frontend
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Bootstrap Icons
+
+### Backend
+
+- Python
+- Flask
+- Flask-CORS
+- Groq API
+- pdfplumber
+- PyPDF2
+- python-dotenv
+
+## Proje Yapısı
+
+```bash
+cv-matcher/
+│
+├── cv-matcher-frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
+├── cv-matcher-backend/
+│   ├── app.py
+│   ├── .env
+│   └── requirements.txt
+│
+└── README.md
+Kurulum ve Çalıştırma
+
+Projeyi bilgisayara klonlayın:
+
+git clone https://github.com/kullanici-adin/cv-matcher.git
+cd cv-matcher
+
+Backend klasörüne girin:
+
+cd cv-matcher-backend
+
+Sanal ortam oluşturun:
+
+python -m venv venv
+
+Windows için sanal ortamı aktif edin:
+
+venv\Scripts\activate
+
+MacOS / Linux için sanal ortamı aktif edin:
+
+source venv/bin/activate
+
+Gerekli paketleri yükleyin:
+
+pip install flask flask-cors python-dotenv pdfplumber PyPDF2 groq
+
+Backend klasörünün içine .env dosyası oluşturun ve Groq API anahtarınızı ekleyin:
+
+GROQ_API_KEY=your_groq_api_key
+
+Backend sunucusunu başlatın:
+
+python app.py
+
+Backend aşağıdaki adreste çalışır:
+
+http://127.0.0.1:5000
+
+Yeni bir terminal açıp frontend klasörüne girin:
+
+cd cv-matcher-frontend
+
+index.html dosyasını tarayıcıda açın veya VS Code Live Server ile çalıştırın.
+
+Live Server kullanıldığında proje genellikle şu adreste açılır:
+
+http://127.0.0.1:5500
+Uygulama Kullanımı
+Backend sunucusu başlatılır.
+Frontend tarayıcıda açılır.
+Kullanıcı PDF formatındaki CV dosyasını yükler.
+"Analizi Başlat" butonuna tıklanır.
+CV dosyası backend tarafına gönderilir.
+Backend PDF içeriğini okur.
+Groq Llama 3.3 modeli ile CV analizi yapılır.
+Analiz sonucu frontend ekranında kullanıcıya gösterilir.
+API Endpoint
+
+CV analizi için kullanılan endpoint:
+
+POST /analyze-cv
+
+Tam adres:
+
+http://127.0.0.1:5000/analyze-cv
+
+Bu endpoint, cv adıyla gönderilen PDF dosyasını alır ve analiz sonucunu JSON formatında döndürür.
+
+Örnek JSON Çıktısı
+{
+  "analysis": {
+    "Genel Değerlendirme": [],
+    "Güçlü Yönler": [],
+    "Eksik Beceriler": [],
+    "Geliştirme Önerileri": [],
+    "Kariyer Potansiyeli": []
+  },
+  "jobs": [
+    {
+      "position": "Pozisyon adı",
+      "reason": "Pozisyona uygunluk açıklaması",
+      "match_level": "Yüksek / Orta / Geliştirilebilir",
+      "career_path": "Kariyer yolu"
+    }
+  ],
+  "score": 85,
+  "status": "success"
+}
+requirements.txt
+
+Backend için gerekli paketler:
+
+flask
+flask-cors
+python-dotenv
+pdfplumber
+PyPDF2
+groq
+.gitignore
+
+Projede aşağıdaki dosya ve klasörler GitHub'a yüklenmemelidir:
+
+.env
+venv/
+__pycache__/
+*.pyc
+Geliştirici
+
+Nergiz Er
+
+GitHub: ernergiz
+LinkedIn: nergizer
+Not
+
+Bu proje, CV analiz sürecini yapay zeka desteğiyle daha hızlı, anlaşılır ve profesyonel hale getirmek amacıyla geliştirilmiştir.
