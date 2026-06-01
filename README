@@ -54,7 +54,7 @@ Kurulum ve Çalıştırma
 
 Projeyi bilgisayara klonlayın:
 
-git clone https://github.com/kullanici-adin/cv-matcher.git
+git clone https://github.com/ernergiz/cv-matcher.git
 cd cv-matcher
 
 Backend klasörüne girin:
@@ -151,12 +151,7 @@ PyPDF2
 groq
 .gitignore
 
-Projede aşağıdaki dosya ve klasörler GitHub'a yüklenmemelidir:
 
-.env
-venv/
-__pycache__/
-*.pyc
 Geliştirici
 
 Nergiz Er
